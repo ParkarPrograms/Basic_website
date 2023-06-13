@@ -1,0 +1,105 @@
+body{
+  background-color: #f0f1e2;
+    padding: 0px 0px 0px 2px ;
+
+}
+
+.front {
+  background-color: #e57e93;
+  color: #f0f1e2;
+
+}
+/*hover effects*/
+
+#menu:hover, #order:hover{
+background-color: #ede7d3;
+cursor: pointer;
+}
+#order:hover{
+    background-color: #d45f8c;
+    cursor: pointer;
+}
+
+
+/* navigation bar text colours */
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: #b56d09;
+}
+.navbar-light .navbar-brand {
+    color: #b56d09;
+}
+
+.navbar-toggler{
+    color: #b56d09 !important;
+}
+
+.navbar-brand:hover{
+    color: #b56d09;
+
+}
+.menu {
+  color: #b56d09;
+}
+
+/*.gallery {
+  background-color: #e57e93;
+  color: #f0f1e2;
+}*/
+
+.order {
+  background-color: #e57e93;
+  color: #f0f1e2;
+
+}
+
+
+.testimonial{
+  color: #b56d09;
+}
+
+.socials {
+
+  color: #b56d09;
+}
+a{
+    color: #b56d09;
+    text-decoration : none;
+}
+a:hover{
+    color: #b52009;
+    text-decoration : underline;
+}
+
+.footer {
+
+  color: #b56d09;
+  text-align: center;
+}
+
+footer p{
+    padding-bottom :1%;
+}
+
+
+h1, h2, h3, p{
+    margin-left : 2%;
+}
+
+
+p{
+    margin-bottom : 0px;
+    padding-bottom : 3%;
+}
+.intro-image{
+    padding-right :0px;
+}
+
+.row{
+    margin-right:0px;
+}
+
+
+/*menu things*/
+.menu-image{
+    padding: 3%;
+}

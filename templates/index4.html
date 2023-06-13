@@ -1,0 +1,154 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block styles %}
+
+{{ super() }}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="..\static\styles.css">{% endblock %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+{% block title %}The Cake Room{% endblock %}
+
+
+{% block content %}
+
+  <section id="title">
+
+
+<nav class=" navbar-expand-lg navbar-light navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Cake Room</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#order">Order</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+
+
+    <!-- Title -->
+    <div class = "front">
+    <div class="row" >
+    <div  class="col-lg-6 col-md-12 col-sm-12" >
+      <h1 >Homemade.</h1>
+      <h2>Fresh from the oven, straight to you</h2>
+    </div>
+    <div  class="col-lg-6  col-md-12 col-sm-12 intro-image"  >
+      <img src="static/images/rough.gif" class = "img-fluid" alt="animated sequence">
+    </div>
+  </div>
+  </div>
+
+  </section>
+
+
+  <!-- Menu -->
+<div onclick="window.location='{{ url_for('menu') }}';">
+  <section id="menu" class="menu">
+    <div class="containter">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <h3>Don't know what to order?</h3>
+          <p>Read our menu!</p>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12">
+          <img src="static/images/menu rough.png" class = "img-fluid menu-image" alt="animated sequence">
+        </div>
+    </div>
+    </div>
+
+
+  </section>
+</div>
+
+  <!-- gallery -->
+
+<!--  <section id="gallery" class="gallery">-->
+
+<!--    <h3>Want to see more?</h3>-->
+<!--    <p>Sneak a peek at our gallery</p>-->
+
+<!--  </section>-->
+
+  <!-- Order -->
+
+  <section id="order" class="order" onclick="window.location='{{ url_for('order') }}';">
+    <div>
+      <h2>Ready to order?</h2>
+      <p>Tell us what you want!</p>
+    </div>
+
+
+
+  </section>
+
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials" class="testimonial">
+
+    <h2>Read what our customers have to say!</h2>
+
+    <h2>Cake yum</h2>
+    <img src="images/dog-img.jpg" alt="cake eater">
+    <em>i eat cake</em>
+
+    <!-- <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+    <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+    <em>Beverly, Illinois</em> -->
+
+  </section>
+
+
+  <!-- Press -->
+
+  <!-- <section id="press", class="">
+    <img src="images/techcrunch.png" alt="tc-logo">
+    <img src="images/tnw.png" alt="tnw-logo">
+    <img src="images/bizinsider.png" alt="biz-insider-logo">
+    <img src="images/mashable.png" alt="mashable-logo">
+
+  </section> -->
+
+
+
+
+  <!-- Call to Action -->
+
+  <section id="socials", class = "socials">
+
+    <h3>Find us online</h3>
+    <p>instagram <br>
+      email</p>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer", class= "footer">
+
+    <p>© Copyright 2023 The Cake Room</p>
+
+  </footer>
+
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+
+
+
+body{
+background: rgb(233,171,184);
+background: linear-gradient(90deg, rgba(233,171,184,1) 0%, rgba(240,241,226,1) 30%, rgba(240,241,226,1) 70%, rgba(233,171,184,1) 100%);
+}
+
+h1,h3{
+    font-family: "century gothic";
+    font-weight: bold;
+    color: #7f3a4c;
+}
+
+h1{
+    padding-left: 7%;
+    padding-bottom: 7%;
+    padding-top: 5%;
+}
+
+li{
+    font-family: "lucida console";
+}
+
+
+
+.list-group-item {
+    background-color: rgba(0,0,0,0);
+     color: #b53f51;
+}
+
+.price{
+    float : right;
+}
+
+
+h4 {
+    text-align: center;
+}
+
+footer{
+    padding-left: 2%;
+    font-family: "century gothic";
+    font-weight: 600;
+    text-align: center;
+    color: #7f3a4c;
+}
+
+a{
+    color: #b53f51;
+    text-decoration : none;
+}
+a:hover{
+    color: #cd6c6a;
+    text-decoration : underline;
+}

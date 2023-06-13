@@ -1,0 +1,112 @@
+{% extends 'bootstrap/base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="..\static\styles3.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+{% block title %}Order{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+
+      <h1>Place your order</h1>
+        <h3>Please note, this is an overview of your order.</h3>
+        <h3>Your order will be confirmed once we reach out to you on the mobile number you enter.</h3>
+
+    <form action = "/Thanks" method = "POST" >
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label(class = "form-label") }}
+        {{ form.name(class= "form-control") }}
+
+
+
+
+        {{ form.number.label(class = "form-label") }}
+        {{ form.number(class= "form-control") }}
+
+        {{ form.email.label(class = "form-label") }}
+        {{ form.email(class= "form-control") }}
+
+        {{ form.Address.label(class = "form-label") }}
+        {{ form.Address(class= "form-control") }}
+
+        <br>
+
+
+            <div id="form-container">
+        <div class="form-line" id="form-line-1">
+            <label for="cakes">What would you like to have?:</label>
+  <select id="cakes" name="cakes">
+    <option value="Tall Cake">Tall Cake</option>
+    <option value="Cup Cake">Cup cake</option>
+    <option value="Cheesecake">Cheesecake</option>
+    <option value="Loaves">Loaves</option>
+
+  </select>
+            <br>
+            <label>How many?:</label>
+            <input type="number" name="field2">
+            <button type="button" class="btn btn-danger remove-line">-</button>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary add-line">+</button>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Handle addition of form lines
+        $('.add-line').click(function() {
+            $.ajax({
+                type: 'GET',
+                url: '/add_line',
+                success: function(response) {
+                    $('#form-container').append(response);
+                }
+            });
+        });
+
+        // Handle removal of form lines
+        $('#form-container').on('click', '.remove-line', function() {
+            $(this).closest('.form-line').remove();
+        });
+    });
+</script>
+
+
+
+        <br>
+        {{ form.Specifications.label(class = "form-label") }}
+        {{ form.Specifications(class= "form-control") }}
+        {{ form.OrderType.label(class = "form-label") }}
+        {{ form.OrderType(class= "form-control") }}
+        {{ form.DateOfFood.label(class = "form-label") }}
+        {{ form.DateOfFood(class= "form-control") }}
+
+
+
+        <br/>
+        {{ form.submit(class= "btn btn-primary") }}
+
+    </form>
+
+
+
+	  <p class="space-above"><a href="{{ url_for('hello_world') }}">Go back to home page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
